@@ -8,9 +8,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using Web.Models;
+using CapaPresentacion.Models;
 
-namespace Web.Controllers
+namespace CapaPresentacion.Controllers
 {
     [Authorize]
     public class AccountController : Controller

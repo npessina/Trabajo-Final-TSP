@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\TuPilcheria\BL\bin\Debug\CapaNegocio.dll.config
+C:\Users\User\source\repos\TuPilcheria\BL\bin\Debug\CapaNegocio.dll
+C:\Users\User\source\repos\TuPilcheria\BL\bin\Debug\CapaNegocio.pdb
+C:\Users\User\source\repos\TuPilcheria\BL\bin\Debug\CapaDatos.dll
+C:\Users\User\source\repos\TuPilcheria\BL\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\TuPilcheria\BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\TuPilcheria\BL\bin\Debug\CapaDatos.pdb
+C:\Users\User\source\repos\TuPilcheria\BL\bin\Debug\CapaDatos.dll.config
+C:\Users\User\source\repos\TuPilcheria\BL\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\TuPilcheria\BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\source\repos\TuPilcheria\BL\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\User\source\repos\TuPilcheria\BL\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\User\source\repos\TuPilcheria\BL\obj\Debug\CapaNegocio.csprojAssemblyReference.cache
+C:\Users\User\source\repos\TuPilcheria\BL\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\TuPilcheria\BL\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\User\source\repos\TuPilcheria\BL\obj\Debug\CapaNegocio.dll
+C:\Users\User\source\repos\TuPilcheria\BL\obj\Debug\CapaNegocio.pdb

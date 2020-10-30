@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using Web.Models;
+using CapaPresentacion.Models;
 
-namespace Web
+namespace CapaPresentacion
 {
     public partial class Startup
     {

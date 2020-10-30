@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAL
+namespace CapaDatos
 {
     using System;
     using System.Data.Entity;

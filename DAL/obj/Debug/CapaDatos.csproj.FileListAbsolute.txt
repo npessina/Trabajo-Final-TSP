@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\TuPilcheria\DAL\bin\Debug\CapaDatos.dll.config
+C:\Users\User\source\repos\TuPilcheria\DAL\bin\Debug\CapaDatos.dll
+C:\Users\User\source\repos\TuPilcheria\DAL\bin\Debug\CapaDatos.pdb
+C:\Users\User\source\repos\TuPilcheria\DAL\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\TuPilcheria\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\TuPilcheria\DAL\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\TuPilcheria\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\source\repos\TuPilcheria\DAL\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\User\source\repos\TuPilcheria\DAL\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\User\source\repos\TuPilcheria\DAL\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\User\source\repos\TuPilcheria\DAL\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\TuPilcheria\DAL\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\User\source\repos\TuPilcheria\DAL\obj\Debug\CapaDatos.dll
+C:\Users\User\source\repos\TuPilcheria\DAL\obj\Debug\CapaDatos.pdb
