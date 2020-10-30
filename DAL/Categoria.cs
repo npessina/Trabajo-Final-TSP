@@ -12,19 +12,19 @@ namespace CapaDatos
     using System;
     using System.Collections.Generic;
     
-    public partial class Category
+    public partial class Categoria
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Category()
+        public Categoria()
         {
-            this.Products = new HashSet<Product>();
+            this.Productos = new HashSet<Producto>();
         }
     
-        public int CategoryId { get; set; }
-        public string CategoryCode { get; set; }
-        public string CategoryName { get; set; }
+        public int IdCategoria { get; set; }
+        public string CodigoCategoria { get; set; }
+        public string NombreCategoria { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Producto> Productos { get; set; }
     }
 }

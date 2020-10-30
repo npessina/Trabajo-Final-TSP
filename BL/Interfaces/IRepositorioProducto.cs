@@ -1,14 +1,10 @@
 ﻿using CapaDatos;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CapaNegocio.Interfaces
 {
-    interface IRepositorioProducto : IRepositorio<Product>
+    interface IRepositorioProducto : IRepositorio<Producto>
     {
-        IEnumerable<Product> ObtenerProductosMasVendidos(int count);
+        IEnumerable<Producto> ObtenerProductosMasVendidos(int count);
     }
 }

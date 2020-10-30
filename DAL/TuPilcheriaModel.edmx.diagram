@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="db0ba7f7434e4a5b9d32569d39534eb1" Name="Diagram1">
-        <EntityTypeShape EntityType="TuPilcheriaModel.Category" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="TuPilcheriaModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+      <Diagram DiagramId="8c5a2b2042fc40b48d415590ec0d58d4" Name="Diagram1">
+        <EntityTypeShape EntityType="TuPilcheriaModel.Categoria" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TuPilcheriaModel.Producto" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="TuPilcheriaModel.FK_Products_Categories" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

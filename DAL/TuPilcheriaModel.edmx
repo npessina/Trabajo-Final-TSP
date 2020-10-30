@@ -5,44 +5,44 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="TuPilcheriaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Categories">
+        <EntityType Name="Categorias">
           <Key>
-            <PropertyRef Name="CategoryId" />
+            <PropertyRef Name="IdCategoria" />
           </Key>
-          <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CategoryCode" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="CategoryName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="IdCategoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodigoCategoria" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NombreCategoria" Type="varchar" MaxLength="255" Nullable="false" />
         </EntityType>
-        <EntityType Name="Products">
+        <EntityType Name="Productos">
           <Key>
-            <PropertyRef Name="ProductId" />
+            <PropertyRef Name="IdProducto" />
           </Key>
-          <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CategoryId" Type="int" Nullable="false" />
-          <Property Name="ProductCode" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="ProductName" Type="nvarchar" MaxLength="250" Nullable="false" />
-          <Property Name="Description" Type="nvarchar" MaxLength="250" />
-          <Property Name="ImagePath" Type="nvarchar" MaxLength="550" Nullable="false" />
-          <Property Name="ProductPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="IdProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdCategoria" Type="int" Nullable="false" />
+          <Property Name="CodigoProducto" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NombreProducto" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="250" />
+          <Property Name="RutaImagen" Type="nvarchar" MaxLength="550" Nullable="false" />
+          <Property Name="PrecioProducto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
         </EntityType>
         <Association Name="FK_Products_Categories">
-          <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
-          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <End Role="Categorias" Type="Self.Categorias" Multiplicity="1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Categories">
-              <PropertyRef Name="CategoryId" />
+            <Principal Role="Categorias">
+              <PropertyRef Name="IdCategoria" />
             </Principal>
-            <Dependent Role="Products">
-              <PropertyRef Name="CategoryId" />
+            <Dependent Role="Productos">
+              <PropertyRef Name="IdCategoria" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="TuPilcheriaModelStoreContainer">
-          <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Categorias" EntityType="Self.Categorias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Products_Categories" Association="Self.FK_Products_Categories">
-            <End Role="Categories" EntitySet="Categories" />
-            <End Role="Products" EntitySet="Products" />
+            <End Role="Categorias" EntitySet="Categorias" />
+            <End Role="Productos" EntitySet="Productos" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -50,46 +50,46 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TuPilcheriaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Category">
+        <EntityType Name="Categoria">
           <Key>
-            <PropertyRef Name="CategoryId" />
+            <PropertyRef Name="IdCategoria" />
           </Key>
-          <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CategoryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CategoryName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Products" Relationship="Self.FK_Products_Categories" FromRole="Categories" ToRole="Products" />
+          <Property Name="IdCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodigoCategoria" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombreCategoria" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Productos" Relationship="Self.FK_Products_Categories" FromRole="Categorias" ToRole="Productos" />
         </EntityType>
-        <EntityType Name="Product">
+        <EntityType Name="Producto">
           <Key>
-            <PropertyRef Name="ProductId" />
+            <PropertyRef Name="IdProducto" />
           </Key>
-          <Property Name="ProductId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CategoryId" Type="Int32" Nullable="false" />
-          <Property Name="ProductCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ProductName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="ImagePath" Type="String" MaxLength="550" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ProductPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
-          <NavigationProperty Name="Category" Relationship="Self.FK_Products_Categories" FromRole="Products" ToRole="Categories" />
+          <Property Name="IdProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCategoria" Type="Int32" Nullable="false" />
+          <Property Name="CodigoProducto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombreProducto" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="RutaImagen" Type="String" MaxLength="550" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PrecioProducto" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <NavigationProperty Name="Categoria" Relationship="Self.FK_Products_Categories" FromRole="Productos" ToRole="Categorias" />
         </EntityType>
         <Association Name="FK_Products_Categories">
-          <End Role="Categories" Type="Self.Category" Multiplicity="1" />
-          <End Role="Products" Type="Self.Product" Multiplicity="*" />
+          <End Role="Categorias" Type="Self.Categoria" Multiplicity="1" />
+          <End Role="Productos" Type="Self.Producto" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Categories">
-              <PropertyRef Name="CategoryId" />
+            <Principal Role="Categorias">
+              <PropertyRef Name="IdCategoria" />
             </Principal>
-            <Dependent Role="Products">
-              <PropertyRef Name="CategoryId" />
+            <Dependent Role="Productos">
+              <PropertyRef Name="IdCategoria" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="TuPilcheriaDbContext" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Categories" EntityType="Self.Category" />
-          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="Categorias" EntityType="Self.Categoria" />
+          <EntitySet Name="Productos" EntityType="Self.Producto" />
           <AssociationSet Name="FK_Products_Categories" Association="Self.FK_Products_Categories">
-            <End Role="Categories" EntitySet="Categories" />
-            <End Role="Products" EntitySet="Products" />
+            <End Role="Categorias" EntitySet="Categorias" />
+            <End Role="Productos" EntitySet="Productos" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -98,25 +98,25 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="TuPilcheriaModelStoreContainer" CdmEntityContainer="TuPilcheriaDbContext">
-          <EntitySetMapping Name="Categories">
-            <EntityTypeMapping TypeName="TuPilcheriaModel.Category">
-              <MappingFragment StoreEntitySet="Categories">
-                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
-                <ScalarProperty Name="CategoryCode" ColumnName="CategoryCode" />
-                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <EntitySetMapping Name="Categorias">
+            <EntityTypeMapping TypeName="TuPilcheriaModel.Categoria">
+              <MappingFragment StoreEntitySet="Categorias">
+                <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+                <ScalarProperty Name="CodigoCategoria" ColumnName="CodigoCategoria" />
+                <ScalarProperty Name="NombreCategoria" ColumnName="NombreCategoria" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Products">
-            <EntityTypeMapping TypeName="TuPilcheriaModel.Product">
-              <MappingFragment StoreEntitySet="Products">
-                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
-                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
-                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
-                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
-                <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <EntitySetMapping Name="Productos">
+            <EntityTypeMapping TypeName="TuPilcheriaModel.Producto">
+              <MappingFragment StoreEntitySet="Productos">
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+                <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="RutaImagen" ColumnName="RutaImagen" />
+                <ScalarProperty Name="PrecioProducto" ColumnName="PrecioProducto" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

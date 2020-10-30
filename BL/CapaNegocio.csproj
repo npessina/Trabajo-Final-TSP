@@ -48,10 +48,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IRepositorioCategoria.cs" />
     <Compile Include="Interfaces\IRepositorioProducto.cs" />
     <Compile Include="Interfaces\IRepositorio.cs" />
+    <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\Repositorio.cs" />
+    <Compile Include="Repositorios\RepositorioCategoria.cs" />
+    <Compile Include="Repositorios\RepositorioProducto.cs" />
+    <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

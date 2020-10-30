@@ -50,10 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category.cs">
+    <Compile Include="Categoria.cs">
       <DependentUpon>TuPilcheriaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Product.cs">
+    <Compile Include="Producto.cs">
       <DependentUpon>TuPilcheriaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,6 +99,5 @@
       <LastGenOutput>TuPilcheriaModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
